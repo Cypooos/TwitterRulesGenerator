@@ -2,33 +2,41 @@
 from tweepy.streaming import StreamListener
 from tweepy import OAuthHandler
 from tweepy import Stream
- 
+import tweepy
+
 import twitter_credentials
  
 # # # # TWITTER STREAMER # # # #
 
-# class kira_fan():
-# 
-# auth = tweepy.OAuthHandler(config.get("twitter", "consumer_key"), config.get("twitter", "consumer_secret"))
-# auth.set_access_token(config.get("twitter", "access_token"), config.get("twitter", "access_token_secret"))
-# api = tweepy.API(auth)
+class kira_fan():
 
-class TwitterStreamer():
-    """
-    Class for streaming and processing live tweets.
-    """
+    CONF = {
+        "words": ["kira vocaloid","kira song","@kira_prod","yusukekira"]
+    }
+
     def __init__(self):
-        pass
+        self.auth = OAuthHandler(twitter_credentials.CONSUMER_KEY, twitter_credentials.CONSUMER_SECRET)
+        self.auth.set_access_token(twitter_credentials.ACCESS_TOKEN, twitter_credentials.ACCESS_TOKEN_SECRET)
 
-    def stream_tweets(self, fetched_tweets_filename, hash_tag_list):
-        # This handles Twitter authetification and the connection to Twitter Streaming API
-        listener = StdOutListener(fetched_tweets_filename)
-        auth = OAuthHandler(twitter_credentials.CONSUMER_KEY, twitter_credentials.CONSUMER_SECRET)
-        auth.set_access_token(twitter_credentials.ACCESS_TOKEN, twitter_credentials.ACCESS_TOKEN_SECRET)
-        stream = Stream(auth, listener)
+        self.api = tweepy.API(self.auth)
+    
+    def start(self):
 
-        # This line filter Twitter Streams to capture data by the keywords: 
-        stream.filter(track=hash_tag_list)
+# class TwitterStreamer():
+#     """
+#     Class for streaming and processing live tweets.
+#     """
+#     def __init__(self):
+#         pass
+# 
+#     def stream_tweets(self, fetched_tweets_filename, hash_tag_list):
+#         # This handles Twitter authetification and the connection to Twitter Streaming API
+#         listener = StdOutListener(fetched_tweets_filename)
+#         auth = OAuthHandler(twitter_credentials.CONSUMER_KEY, twitter_credentials.CONSUMER_SECRET)
+#         stream = Stream(auth, listener)
+# 
+#         # This line filter Twitter Streams to capture data by the keywords: 
+#         stream.filter(track=hash_tag_list)
 
 
 # # # # TWITTER STREAM LISTENER # # # #
