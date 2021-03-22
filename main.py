@@ -21,7 +21,7 @@ while True:
     print("New Rule in 20 seconds:",rule)
 
     sleep(20)
-    t = api.update_status(rule)
+    # t = api.update_status(rule)
 
     
     # api.upda
