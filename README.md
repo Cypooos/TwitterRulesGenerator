@@ -1,4 +1,4 @@
-# PY_DisruptRuleBot
+# TwitterRulesGenerator
 
 Une - assez vieille - IA qui génère des "règles" à internet et les publient automatiquement sur [twitter](https://twitter.com/DisruptRuleBot)
 
