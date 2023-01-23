@@ -3,13 +3,14 @@ import tweepy
 
 def auth():
     """
-    se connecte à l'api twitter
+    Se connecte à l'api twitter
     """
-    consumer_key = "04ITuPOxz3TsmGU5ijBvZeLED"
-    consumer_secret = "zV1OslaCuWaVJkGOYssgLIc4BEN5Dr8PUDlb2SgGPfDrBupJQ3"
+    # PS: les accès ont été re-généré au moment de rendre ce repository publique :)
+    consumer_key = "X"
+    consumer_secret = "X"
 
-    access_token = "1373256143120777216-zhTc0c5jecSWfMJLn63uqS5g9v2q7t"
-    access_token_secret = "aeVQnsoJrdP7w8STeDXuYto8SuLt5PGIkfC4ppBwgK8ep"
+    access_token = "X"
+    access_token_secret = "X"
 
     auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
     auth.set_access_token(access_token, access_token_secret)
