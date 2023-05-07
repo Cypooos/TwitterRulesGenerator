@@ -6,4 +6,4 @@ Les données en entrée sont des conversations publique sur le serveur discord d
 Les résultats peuvent être trouvé ici : [@disruptRuleBot](https://twitter.com/disruptRuleBot).
 
 ## Compilation des meilleurs tweets :
-![L'image de compilation des meilleurs tweets](https://github.com/Cypooos/TwitterRulesGenerator/blob/main/compilation.jpg?raw=true)
+![L'image de compilation des meilleurs tweets](https://github.com/Cypooos/TwitterRulesGenerator/blob/main/compilation.png?raw=true)
